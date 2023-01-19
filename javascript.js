@@ -8,6 +8,15 @@ const pageInput = document.querySelector("#pages");
 const readInput = document.querySelector("#read-status");
 const cancelButton = document.querySelector("#cancel-button");
 
+class Book {
+  constructor (name, author, pages, readStatus) {
+    this["Name:"] = name;
+    this["Author:"] = author;
+    this["Pages:"] = pages;
+    this["Read:"] = readStatus;
+  }
+}
+
 form.className = "hidden";
 bookArray.push(new Book("The Hobbit", "J.R.R Tolkien", 295, "⨯"));
 bookArray.push(new Book("Harry Potter", "J.K. Rowling", 354, "✓"));
@@ -17,13 +26,6 @@ function createElementWithClass(elementType, elementClass) {
   const temp = document.createElement(elementType);
   temp.className = elementClass;
   return temp;
-}
-
-function Book(name, author, pages, readStatus) {
-  this["Name:"] = name;
-  this["Author:"] = author;
-  this["Pages:"] = pages;
-  this["Read:"] = readStatus;
 }
 
 Book.prototype.changeReadStatus = function() {
