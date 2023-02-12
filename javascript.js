@@ -79,3 +79,8 @@ form.addEventListener("submit", (event) => {
 })
 addButton.addEventListener("click", () => form.classList.toggle("hidden"));
 cancelButton.addEventListener("click", () => form.classList.toggle("hidden"));
+
+// Revisit: Form Validation
+const inputs = document.querySelectorAll("input");
+inputs.forEach(input => input.setAttribute("required", ""));
+document.querySelector("input[type=checkbox]").removeAttribute("required");
